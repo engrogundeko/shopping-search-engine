@@ -1,0 +1,74 @@
+{
+    "shopproviderresponse": {
+        "shop_name": "JumiaNG",
+        "all_prices": [
+            "\u20a6 115,775"
+        ],
+        "results": [
+            {
+                "prices": {
+                    "name": "Tecno POP 8 (BG6) 6.6\" HD+,2GB RAM + 64GB ROM 5000mAh, 8MP - Black",
+                    "current_price": "\u20a6 115,775",
+                    "currency": "NGN",
+                    "product_id": "TE339MP5Y9I20NAFAMZ",
+                    "product_url": "https://www.jumia.com.ng//tecno-pop-8-bg6-6.6-hd2gb-ram-64gb-rom-5000mah-8mp-black-382118895.html",
+                    "discount": "23%",
+                    "old_price": "\u20a6 150,000",
+                    "product_affiliate_url": null
+                },
+                "seller": {
+                    "seller_name": null,
+                    "seller_score": null,
+                    "performance_details": {}
+                },
+                "specifications": {
+                    "key_features": [
+                        "64GB ROM + 2GB RAM",
+                        "6.6 Inches HD+ Dot Notch Screen",
+                        "13MP Front Camera with Dual Flash",
+                        "8MP AI Rear Camera with Dual Flash",
+                        "4G Supported",
+                        "Android 12",
+                        "Side Fingerprint"
+                    ],
+                    "box_contents": [
+                        "Phone * 1",
+                        "Charger cable * 1",
+                        "Charger * 1"
+                    ],
+                    "color": "",
+                    "weight": "",
+                    "dimensions": "",
+                    "material": "",
+                    "features": [],
+                    "brand": "",
+                    "specifications": {}
+                },
+                "reviews": {
+                    "total_reviews": 0,
+                    "reviews": [],
+                    "rating_breakdown": {},
+                    "total_ratings": 0,
+                    "average_rating": null
+                },
+                "product": {
+                    "name": "POP 8 (BG6) 6.6\" HD+,2GB RAM + 64GB ROM 5000mAh, 8MP - Black",
+                    "brand": "Tecno",
+                    "price": "\u20a6 115,775",
+                    "old_price": "\u20a6 150,000",
+                    "discount": "23%",
+                    "rating": 4.4,
+                    "total_ratings": 8,
+                    "is_shop_express": true,
+                    "categories": [
+                        "Phones & Tablets",
+                        "Mobile Phones",
+                        "Smartphones",
+                        "Android Phones"
+                    ],
+                    "image_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/59/8811283/1.jpg?7048"
+                }
+            }
+        ]
+    }
+}
