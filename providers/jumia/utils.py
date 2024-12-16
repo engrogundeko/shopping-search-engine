@@ -179,19 +179,54 @@ def extract_reviews(html_content: BeautifulSoup) -> ReviewsResponseSchema:
     review_info = ReviewsResponseSchema(**product_reviews)
     return review_info
 
+
 def parse_price(price_str: str) -> float:
+    import re
     """
     Converts a price string like '₦ 3,850' to a float value.
     Args:
         price_str (str): Price string to convert, e.g., '₦ 3,850'
     Returns:
         float: Parsed float value
+    Raises:
+        ValueError: If the input cannot be parsed as a valid price.
     """
-    try:
-        # Remove currency symbols and commas, then convert to float
-        return float(price_str.replace('₦', '').replace(',', '').strip())
-    except ValueError:
-        # Return 0.0 if conversion fails
-        print(f"Failed to parse price from: {price_str}")
-        return 0.0
+    if not price_str or not isinstance(price_str, str):
+        raise ValueError("Invalid price string provided")
 
+    # Remove currency symbols and other non-numeric characters (except decimal point)
+    clean_price = re.sub(r'[^\d.]', '', price_str)
+
+    if not clean_price:
+        raise ValueError("No numeric value found in price string")
+
+    try:
+        return float(clean_price)
+    except ValueError:
+        raise ValueError(f"Unable to parse price: {price_str}")
+
+
+def parse_discount(discount_str: str) -> float:
+    """
+    Converts a discount string like '40%' to a float value (e.g., 0.4).
+    Args:
+        discount_str (str): Discount string to convert, e.g., '40%'
+    Returns:
+        float: Discount value as a fraction (e.g., 0.4 for 40%)
+    Raises:
+        ValueError: If the input cannot be parsed as a valid discount.
+    """
+    if not discount_str or not isinstance(discount_str, str):
+        raise ValueError("Invalid discount string provided")
+
+    # Remove the '%' symbol and strip spaces
+    clean_discount = discount_str.replace('%', '').strip()
+
+    if not clean_discount.isdigit():
+        raise ValueError(f"Invalid discount value: {discount_str}")
+
+    try:
+        # Convert to fraction
+        return float(clean_discount) / 100
+    except ValueError:
+        raise ValueError(f"Unable to parse discount: {discount_str}")

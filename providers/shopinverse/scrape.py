@@ -209,6 +209,7 @@ class ShopInverse(ShopEngine):
     async def run(self):
         await self.initialize_data()
         results = await self.search(self.search_query)
+
         return results
 
 # async def main():

@@ -7,7 +7,7 @@ from .seller import SellerDetailSchema
 from .specification import SpecificationsSchema
 from .review import ReviewSchema, ReviewsResponseSchema
 from .product import ProductSchema
-
+from .search import TextSchema, ContentSchema
 
 @dataclass
 class ProductResponseSchema:
@@ -62,7 +62,6 @@ class ShopProviderResponse:
         # Check if the input is a dictionary with 'results' key
         result_dict = self.to_dict()["shopproviderresponse"]
         results = result_dict["results"]
-        print(results)
         for product in results:
             try:
                 # Safely extract product information with default values
@@ -92,29 +91,22 @@ class ShopProviderResponse:
                 - **Categories:**\n{categories}
                 - **Key Features:**\n{features}
                 - **Box Contents:**\n{box_contents}
-
-                ## Pricing and Discounts
-                - **Current Price:** {price}
-                - **Old Price:** {old_price}
-                - **Discount:** {discount}
                 """
-                items.append(
-                    {
-                        "contents": markdown,
-                        "metadata": {
+
+                metadata = {
                             "title": title,
                             "price": price,
                             "discount": discount,
                             "product_url": product_url,
                             "image_url": image_url
                         }
-                    }
-                )
+                items.append(TextSchema(text=markdown, metadata=metadata))
             except Exception as e:
                 print(f"Error processing product: {e}")
                 continue
 
-        return items
+        contents = ContentSchema(contents=items)
+        return contents
 
 
 @dataclass
