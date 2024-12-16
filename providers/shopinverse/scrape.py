@@ -7,10 +7,10 @@ import re
 from typing import List
 from pprint import pprint
 
-from providers.shopinverse.utils import get_affiliate_link
+from .utils import get_affiliate_link
 # from searchEngine.schema.price import PriceDetailSchema
 # from searchEngine.schema.product import ProductSchema
-from schema import (
+from ...schema import (
     ProductResponseSchema, 
     SellerDetailSchema, 
     ShopProviderResponse, 
@@ -32,6 +32,7 @@ class ShopInverse(ShopEngine):
         super().__init__(search_query)
         self.url = "https://shopinverse.com/"
         self.filename = "shopinverse.json"
+        
         # await self.update_product_data()
 
     async def initialize_data(self):
@@ -95,25 +96,25 @@ class ShopInverse(ShopEngine):
                 matching_products.append(product)
                 rank_list.append({"name": title})
                 
-        if matching_products:
-            results = await rank_search_results(rank_list[:10], keyword) 
-            new_results = []
-            for match in matching_products:
-                for r in results:
-                    d = r.__dict__
-                    if match["title"] == d["name"]:
-                        new_results.append(match)
+        # if matching_products:
+        #     # results = await rank_search_results(rank_list[:10], keyword) 
+        #     new_results = []
+        #     for match in matching_products:
+        #         for r in results:
+        #             d = r.__dict__
+        #             if match["title"] == d["name"]:
+        #                 new_results.append(match)
 
-        else:
-            return {
-                "shop_name": "ShopInverse",
-                "results": []
-            }
+        # else:
+        #     return {
+        #         "shop_name": "ShopInverse",
+        #         "results": []
+        #     }
 
         try:
-            dt = {"products": new_results}
+            dt = {"products": matching_products}
             product_data = ProductData.model_validate(dt)
-            print(product_data)
+            # print(product_data)
             validated_product_data = self.convert(product_data.products)
             return validated_product_data
         
@@ -121,7 +122,7 @@ class ShopInverse(ShopEngine):
             print(f"Validation error: {e}")
             return {
                 "shop_name": "ShopInverse",
-                "results": new_results
+                "results": []
             }
 
     def convert(self, product_data: Product):
@@ -205,19 +206,18 @@ class ShopInverse(ShopEngine):
                 return i['src']
 
 
+    async def run(self):
+        await self.initialize_data()
+        results = await self.search(self.search_query)
+        return results
 
+# async def main():
+#     query = "Lenovo"
+#     shop_inverse = ShopInverse(query)
+#     await shop_inverse.initialize_data()
+#     results = await shop_inverse.search(query)
+#     pprint(results)
+#     print("\n\n ==================== \n\n")
 
-async def main():
-    query = "Lenovo"
-    shop_inverse = ShopInverse(query)
-    await shop_inverse.initialize_data()
-    results = await shop_inverse.search(query)
-    pprint(results)
-    print("\n\n ==================== \n\n")
-
-if __name__ == "__main__":
-    asyncio.run(main())
-
-
-
-
+# if __name__ == "__main__":
+#     asyncio.run(main())

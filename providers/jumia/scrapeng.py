@@ -6,7 +6,7 @@ import httpx
 from bs4 import BeautifulSoup 
 
 from .utils import extract_reviews,extract_seller_information,extract_specifications, extract_product_data
-from schema import (
+from ...schema import (
     SellerDetailSchema, 
     ProductResponseSchema,
     ShopProviderResponse,
@@ -68,7 +68,7 @@ class JumiaScraperNG(ShopEngine):
             # self.re_rank_list.append(product['name'])
 
         self.search_results.extend(products)
-        self.search_results = await rank_search_results(self.re_rank_list, self.search_query, self.search_results)
+        # self.search_results = await rank_search_results(self.re_rank_list, self.search_query, self.search_results)
         return self.search_results
 
     async def fetch_page(self, url) -> PriceDetailSchema:
@@ -169,29 +169,25 @@ class JumiaScraperNG(ShopEngine):
             if price.__dict__["product_url"] == product_url:
                 return price
 
-async def main():
-    query = "Tecno pop 5" 
-    scraper = JumiaScraperNG(query)
-    try:
-        re = await scraper.search()
-    except Exception as e:
-        print(f"Error occurred: {e}")
-    print(f"Search results length: {len(scraper.search_results)}")
-    # print(f"Search results: {scraper.search_results}")
-    
-    if scraper.search_results:
-        results = []
-        for r in re:
-            result = r.__dict__
+    async def run(self):
+        try:
+            re = await self.search()
+        except Exception as e:
+            print(f"Error occurred: {e}")
+        print(f"Search results length: {len(self.search_results)}")
+        
+        if self.search_results:
+            results = []
+            for r in re:
+                result = r.__dict__
 
-            response = await scraper.get_detailed_product(result["product_url"])
-            results.append(response)
+                response = await self.get_detailed_product(result["product_url"])
+                results.append(response)
 
-        response = ShopProviderResponse(shop_name="JumiaNG", results=results, all_prices=scraper.get_all_prices)
-        response = response.to_json()
-        # pprint(response.__dict__)
-    else:
-        print("No search results found. Unable to get detailed product.")
+            response = ShopProviderResponse(shop_name="JumiaNG", results=results)
+            return response.parse_search_results()
+        else:
+            print("No search results found. Unable to get detailed product.")
 
-if __name__ == "__main__":  
-    asyncio.run(main())
+    if __name__ == "__main__":  
+        asyncio.run(main())

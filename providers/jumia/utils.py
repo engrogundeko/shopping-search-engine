@@ -1,5 +1,5 @@
 from bs4 import BeautifulSoup
-from schema import ReviewsResponseSchema, SpecificationsSchema
+from ...schema import ReviewsResponseSchema, SpecificationsSchema
 
 import json
 

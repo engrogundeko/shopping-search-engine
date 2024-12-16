@@ -1,4 +1,6 @@
+from typing import final
 import httpx
+
 
 class ShopEngine:
     def __init__(self, search_query):
@@ -9,3 +11,5 @@ class ShopEngine:
 
     async def close(self):
         await self.client.aclose()
+
+
