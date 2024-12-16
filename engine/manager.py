@@ -16,10 +16,9 @@ class SearchEngineManager:
         - Check cache for results before executing the search.
         - Save results to cache for future use and to a text file.
         """
-        import time
         import json
 
-        time1 = time.time()
+        
         
         # Safely retrieve cached results
         results = self.cache_manager.get(query)
@@ -48,14 +47,11 @@ class SearchEngineManager:
                 except Exception as e:
                     print(f"Error saving results to file: {e}")
 
-        time2 = time.time()
-        print(f"Search completed. Results: {len(results)}, Time taken: {time2 - time1:.2f} seconds")
-        
         return results
 
 
-manager = SearchEngineManager(QueryEngine(), RedisCache())
 
 if __name__ == '__main__':
     import asyncio
+    manager = SearchEngineManager(QueryEngine(), RedisCache())
     asyncio.run(manager.search("Lenovo Laptop", "Best Affordable Laptops", "fast"))

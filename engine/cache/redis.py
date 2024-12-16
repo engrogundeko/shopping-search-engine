@@ -1,7 +1,7 @@
 import redis
 import json
 from .base import CacheBase
-from ...config import REDIS_PASSWORD
+from config import REDIS_PASSWORD
 
 class RedisCache(CacheBase):
     """

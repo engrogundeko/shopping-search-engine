@@ -2,9 +2,9 @@ from dataclasses import dataclass
 from typing import List, Dict, Optional, Literal, Any
 from asyncio import to_thread
 
-from ...config import GEMINI_API_KEY, REDIS_PASSWORD
-from ...providers.config import get_all_results
-from ...schema import ContentSchema, TextSchema
+from config import GEMINI_API_KEY, REDIS_PASSWORD
+from providers.config import get_all_results
+from schema import ContentSchema
 from .base import QueryEngineBase
 from redis import Redis
 

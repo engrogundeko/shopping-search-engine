@@ -13,7 +13,7 @@ from .utils import (
     parse_price,
     parse_discount
     )
-from ...schema import (
+from schema import (
     SellerDetailSchema, 
     ProductResponseSchema,
     ShopProviderResponse,

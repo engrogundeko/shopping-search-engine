@@ -1,8 +1,7 @@
+import os
 from pydantic_settings import BaseSettings
 from functools import lru_cache
-from typing import Optional
-import os
-import asyncio
+
 from dotenv import load_dotenv
 
 load_dotenv()

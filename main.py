@@ -1,13 +1,14 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from config import get_settings
+from api.route import router
 
-settings = get_settings()
 app = FastAPI(
-    title=settings.PROJECT_NAME,
-    version=settings.VERSION,
-    openapi_url=f"{settings.API_V1_STR}/openapi.json"
+    title="Search Engine API",
+    version="0.1.0",
+    description="API for performing advanced search across multiple providers",
 )
+
+app.include_router(router)
 
 # CORS middleware configuration
 app.add_middleware(
@@ -21,3 +22,7 @@ app.add_middleware(
 @app.get("/")
 async def root():
     return {"message": "Welcome to Volera API"}
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="localhost", port=8000)

@@ -2,7 +2,7 @@ import os
 from typing import List
 from dataclasses import dataclass
 
-from ..schema import PriceDetailSchema
+from schema import PriceDetailSchema
 
 import httpx
 from dotenv import load_dotenv

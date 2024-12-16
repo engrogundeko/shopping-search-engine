@@ -10,7 +10,7 @@ from pprint import pprint
 from .utils import get_affiliate_link
 # from searchEngine.schema.price import PriceDetailSchema
 # from searchEngine.schema.product import ProductSchema
-from ...schema import (
+from schema import (
     ProductResponseSchema, 
     SellerDetailSchema, 
     ShopProviderResponse, 
