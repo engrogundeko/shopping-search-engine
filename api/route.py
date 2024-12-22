@@ -1,7 +1,6 @@
-from fastapi import APIRouter, HTTPException
-from pydantic import BaseModel
-from typing import List, Optional
 import time
+from schema.apis import SearchRequest, SearchResponse
+from fastapi import APIRouter, HTTPException
 
 from engine.manager import SearchEngineManager
 from engine.search.query_engine import QueryEngine
@@ -11,24 +10,8 @@ from engine.cache.redis import RedisCache
 manager = SearchEngineManager(QueryEngine(), RedisCache())
 
 # Create FastAPI app
-router = APIRouter(
-    
-)
+router = APIRouter()
 
-# Request model for search
-class SearchRequest(BaseModel):
-    search_query: str
-    query: Optional[str] = None
-    mode: str = 'fast'
-    cache_ttl: int = 3600
-
-# Response model for search results
-class SearchResponse(BaseModel):
-    results: List[dict]
-    total_results: int
-    search_query: str
-    mode: str
-    time: float
 
 @router.post("/search", response_model=SearchResponse)
 async def perform_search(request: SearchRequest):
@@ -46,15 +29,18 @@ async def perform_search(request: SearchRequest):
     """
     try:
         # Use the query parameter if not provided, default to search_query
-        refined_query = request.query or request.search_query
+        # refined_query = request.query or request.search_query
         
         # Perform the search
         time1 = time.time()
         results = await manager.search(
             search_query=request.search_query, 
-            query=refined_query, 
+            query=request.description, 
             mode=request.mode,
-            cache_ttl=request.cache_ttl
+            n_k=request.n_k,
+            filter=request.filter,
+            cache_ttl=3600 
+            
         )
         time2 = time.time()
         

@@ -133,40 +133,87 @@ class QueryEngine(QueryEngineBase):
         )
         return compressor_retriever.invoke(query)
 
+    def filter_results(self, results: List[Dict[str, Any]], filter_criteria: Dict[str, Any]) -> List[Dict[str, Any]]:
+        """
+        Filter search results based on complex filter criteria.
+        
+        Args:
+            results (List[Dict[str, Any]]): List of search results to filter
+            filter_criteria (Dict[str, Any]): Dictionary containing filter conditions
+        
+        Returns:
+            List[Dict[str, Any]]: Filtered list of results
+        """
+        filtered_results = results.copy()
+        
+        # Price filtering
+        if 'price' in filter_criteria:
+            price_filter = filter_criteria['price']
+            if 'max' in price_filter:
+                filtered_results = [
+                    result for result in filtered_results 
+                    if result.get('price', float('inf')) <= price_filter['max']
+                ]
+        
+        # Attributes filtering
+        if 'attributes' in filter_criteria:
+            attributes = filter_criteria['attributes']
+            
+            # Category filtering
+            if 'category' in attributes:
+                filtered_results = [
+                    result for result in filtered_results
+                    if result.get('category', '').lower() == attributes['category'].lower()
+                ]
+            
+            # Features filtering
+            if 'features' in attributes:
+                required_features = set(attributes['features'])
+                filtered_results = [
+                    result for result in filtered_results
+                    if required_features.issubset(set(result.get('features', [])))
+                ]
+        
+        return filtered_results
 
     async def asearch(
         self, 
         search_query: str, 
         query: str, 
         mode: str = 'quality', 
-        metadata: dict = None, 
+        filter: Dict[str, Any] = None, 
         k: int = 5
-        ):
+    ):
         """
         Perform a search with optional metadata filtering.
+        
+        Args:
+            search_query (str): The search query string
+            query (str): The query for retrieval
+            mode (str, optional): Search mode. Defaults to 'quality'.
+            filter (Dict[str, Any], optional): Filter criteria for results. Defaults to None.
+            k (int, optional): Number of results to retrieve. Defaults to 5.
+        
+        Returns:
+            List[Dict[str, Any]]: Filtered and ranked search results
         """
-        results = await get_all_results(search_query)
-        await self.aload_contents(results)
-
-        # Define metadata filter (if provided)
-        metadata_filter = None
-        if metadata:
-            metadata_filter = FilterExpression(
-                key=list(metadata.keys())[0],  # Assuming single key-value pair for simplicity
-                operator="==",
-                value=list(metadata.values())[0]
-            )
-
-        if mode == 'fast':
-            retriever = self.keyword_retriever()
-            docs = retriever.invoke(query)
-        elif mode == 'balanced':
-            retriever = self.vectorstore.as_retriever(search_kwargs={"k": k, "filter": metadata_filter})
-            docs = retriever.invoke(query)
-        elif mode == 'quality':
+        n_k += 5
+        # Perform initial search
+        if mode == 'quality':
             retriever = EnsembleRetriever(
                 retrievers=[
-                    self.vectorstore.as_retriever(search_kwargs={"k": k, "filter": metadata_filter}),
+                    self.vectorstore.as_retriever(search_kwargs={"k": k, "filter": filter}),
+                    self.keyword_retriever()
+                ],
+                weights=[0.5, 0.5]
+            )
+            docs = retriever.invoke(query)
+        elif mode == 'fast':
+            docs = self.vectorstore.as_retriever(search_kwargs={"k": k}).invoke(query)
+        elif mode == 'balanced':
+            retriever = EnsembleRetriever(
+                retrievers=[
+                    self.vectorstore.as_retriever(search_kwargs={"k": k, "filter": filter}),
                     self.keyword_retriever()
                 ],
                 weights=[0.5, 0.5]
@@ -176,5 +223,10 @@ class QueryEngine(QueryEngineBase):
             raise ValueError("Invalid mode. Choose 'fast', 'balanced', or 'quality'.")
 
         # Convert documents to dictionaries
-        # self.vector_store.delete
-        return [{"content": doc.page_content, "metadata": doc.metadata} for doc in docs]
+        results = [doc.metadata for doc in docs]
+        
+        # Apply additional filtering if filter criteria are provided
+        if filter:
+            results = self.filter_results(results, filter)
+        
+        return results

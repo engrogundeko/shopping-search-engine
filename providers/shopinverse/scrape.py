@@ -1,12 +1,11 @@
-from calendar import c
-from locale import currency
+
 import os
 import json
 import asyncio
 import re
 from typing import List
-from pprint import pprint
 
+from config import NAIRA_DOLLAR_CONVERSION
 from .utils import get_affiliate_link
 # from searchEngine.schema.price import PriceDetailSchema
 # from searchEngine.schema.product import ProductSchema
@@ -135,14 +134,14 @@ class ShopInverse(ShopEngine):
                 name=p.title, 
                 brand=p.vendor, 
                 image_url=images,
-                price=p.variants[0].price, 
+                price=p.variants[0].price / NAIRA_DOLLAR_CONVERSION , 
                 categories=list(p.product_type)
                 )
             url = self.url + "products/" + p.handle
             pr = PriceDetailSchema(
                 name=p.title,
                 product_url=url,
-                current_price=p.variants[0].price,
+                current_price=p.variants[0].price / NAIRA_DOLLAR_CONVERSION,
                 currency="NGN",
                 product_affiliate_url=get_affiliate_link(url),
                 product_id=p.id

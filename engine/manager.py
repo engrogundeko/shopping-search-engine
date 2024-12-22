@@ -10,7 +10,15 @@ class SearchEngineManager:
         self.search_engine = search_engine
         self.cache_manager = cache_manager
 
-    async def search(self, search_query: str, query, mode='fast', cache_ttl=3600):
+    async def search(
+        self, 
+        search_query: str, 
+        query, 
+        filter: str, 
+        n_k: int, 
+        mode='fast', 
+        cache_ttl=3600
+        ):
         """
         Perform a search with caching and save results to a text file.
         - Check cache for results before executing the search.
@@ -28,7 +36,7 @@ class SearchEngineManager:
             print("Cache miss for query:", query)
             
             # Perform the search
-            results = await self.search_engine.asearch(search_query, query, mode)
+            results = await self.search_engine.asearch(search_query, query, mode, filter, n_k)
             
             # Ensure results are not empty before caching or saving
             if results:

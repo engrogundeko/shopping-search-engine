@@ -55,6 +55,7 @@ def scrape_product_data(html_content: BeautifulSoup):
 
 def get_affiliate_link(product_url):
     return product_url + SHOP_INVERSE_KEY
+    
 def extract_specification_details(soup: BeautifulSoup) -> dict:
 
     # Dictionary to store extracted data

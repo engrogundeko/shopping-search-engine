@@ -1,5 +1,6 @@
 from bs4 import BeautifulSoup
 from schema import ReviewsResponseSchema, SpecificationsSchema
+from config import NAIRA_DOLLAR_CONVERSION
 
 import json
 
@@ -201,7 +202,7 @@ def parse_price(price_str: str) -> float:
         raise ValueError("No numeric value found in price string")
 
     try:
-        return float(clean_price)
+        return float(clean_price) / NAIRA_DOLLAR_CONVERSION
     except ValueError:
         raise ValueError(f"Unable to parse price: {price_str}")
 

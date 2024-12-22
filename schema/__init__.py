@@ -1,13 +1,13 @@
-from typing import List
-from dataclasses import dataclass, field
 import json
+from typing import List
+from dataclasses import dataclass
 
+from .product import ProductSchema
 from .price import PriceDetailSchema
 from .seller import SellerDetailSchema
 from .specification import SpecificationsSchema
-from .review import ReviewSchema, ReviewsResponseSchema
-from .product import ProductSchema
 from .search import TextSchema, ContentSchema
+from .review import ReviewSchema, ReviewsResponseSchema
 
 @dataclass
 class ProductResponseSchema:
@@ -96,6 +96,8 @@ class ShopProviderResponse:
                 metadata = {
                             "title": title,
                             "price": price,
+                            "category": categories,
+                            "features": features,
                             "discount": discount,
                             "product_url": product_url,
                             "image_url": image_url
