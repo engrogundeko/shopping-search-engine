@@ -15,7 +15,7 @@ async def get_all_results(search_query) -> list:
         # results = await asyncio.gather(*tasks, return_exceptions=True)
     except Exception as e:
         print(f"Error during task execution: {e}")
-        return final_results  # Return empty list in case of an error
+        return []  # Return empty list in case of an error
 
     # for result in results:
     #     if isinstance(result, Exception):

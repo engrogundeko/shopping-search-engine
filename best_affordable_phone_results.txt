@@ -1,0 +1,102 @@
+[
+    {
+        "content": "# Product Information\n\n                ## Features\n                - **Name:** Infinix Smart 9  6.7\" 3GB RAM/128GB ROM Android 14 Go Black\n                - **Description:** No description available\n                - **Brand:** Infinix\n                - **Categories:**\n- Phones & Tablets\n- Mobile Phones\n- Smartphones\n- Android Phones\n                - **Key Features:**\n- 128GB ROM + 3GB RAM\n- 5000mAh Big Battery\n- 6.7 Inches HD+ Waterdrop Sunlight Display\n- 4G LTE\n- 13MP Dual Rear AI Camera with Flash\n- 8MP Selfie Camera with Flash\n- Android 14 Go Edition\n- Fingerprint & Face Unlock\n- Octa Core Processor\n- 12 Months Warranty\n- Free Case\n                - **Box Contents:**\n- Smart 9\n- Earphones\n- Charger\n- SIM Ejector Tool\n- Warranty Card\n- Free Protective Case\n                ",
+        "metadata": {
+            "title": "Infinix Smart 9  6.7\" 3GB RAM/128GB ROM Android 14 Go Black",
+            "price": "142.001",
+            "discount": "0.29",
+            "product_url": "https://www.jumia.com.ng//infinix-smart-9-6.7-3gb-ram128gb-rom-android-14-go-black-390072379.html",
+            "image_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/97/3270093/1.jpg?1550"
+        }
+    },
+    {
+        "content": "# Product Information\n\n                ## Features\n                - **Name:** Infinix Smart 9  6.7\" 3GB RAM/128GB ROM Android 14 Go Black\n                - **Description:** No description available\n                - **Brand:** Infinix\n                - **Categories:**\n- Phones & Tablets\n- Mobile Phones\n- Smartphones\n- Android Phones\n                - **Key Features:**\n- 128GB ROM + 3GB RAM\n- 5000mAh Big Battery\n- 6.7 Inches HD+ Waterdrop Sunlight Display\n- 4G LTE\n- 13MP Dual Rear AI Camera with Flash\n- 8MP Selfie Camera with Flash\n- Android 14 Go Edition\n- Fingerprint & Face Unlock\n- Octa Core Processor\n- 12 Months Warranty\n- Free Case\n                - **Box Contents:**\n- Smart 9\n- Earphones\n- Charger\n- SIM Ejector Tool\n- Warranty Card\n- Free Protective Case\n                ",
+        "metadata": {
+            "title": "Infinix Smart 9  6.7\" 3GB RAM/128GB ROM Android 14 Go Black",
+            "price": "142.001",
+            "discount": "0.29",
+            "product_url": "https://www.jumia.com.ng//infinix-smart-9-6.7-3gb-ram128gb-rom-android-14-go-black-390072379.html",
+            "image_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/97/3270093/1.jpg?1550"
+        }
+    },
+    {
+        "content": "# Product Information\n\n                ## Features\n                - **Name:** Infinix Smart 9  6.7\" 3GB RAM/128GB ROM Android 14 Go Black\n                - **Description:** No description available\n                - **Brand:** Infinix\n                - **Categories:**\n- Phones & Tablets\n- Mobile Phones\n- Smartphones\n- Android Phones\n                - **Key Features:**\n- 128GB ROM + 3GB RAM\n- 5000mAh Big Battery\n- 6.7 Inches HD+ Waterdrop Sunlight Display\n- 4G LTE\n- 13MP Dual Rear AI Camera with Flash\n- 8MP Selfie Camera with Flash\n- Android 14 Go Edition\n- Fingerprint & Face Unlock\n- Octa Core Processor\n- 12 Months Warranty\n- Free Case\n                - **Box Contents:**\n- Smart 9\n- Earphones\n- Charger\n- SIM Ejector Tool\n- Warranty Card\n- Free Protective Case\n                ",
+        "metadata": {
+            "title": "Infinix Smart 9  6.7\" 3GB RAM/128GB ROM Android 14 Go Black",
+            "price": "142.001",
+            "discount": "0.29",
+            "product_url": "https://www.jumia.com.ng//infinix-smart-9-6.7-3gb-ram128gb-rom-android-14-go-black-390072379.html",
+            "image_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/97/3270093/1.jpg?1550"
+        }
+    },
+    {
+        "content": "# Product Information\n\n                ## Features\n                - **Name:** Infinix Smart 9  6.7\" 3GB RAM/128GB ROM Android 14 Go Black\n                - **Description:** No description available\n                - **Brand:** Infinix\n                - **Categories:**\n- Phones & Tablets\n- Mobile Phones\n- Smartphones\n- Android Phones\n                - **Key Features:**\n- 128GB ROM + 3GB RAM\n- 5000mAh Big Battery\n- 6.7 Inches HD+ Waterdrop Sunlight Display\n- 4G LTE\n- 13MP Dual Rear AI Camera with Flash\n- 8MP Selfie Camera with Flash\n- Android 14 Go Edition\n- Fingerprint & Face Unlock\n- Octa Core Processor\n- 12 Months Warranty\n- Free Case\n                - **Box Contents:**\n- Smart 9\n- Earphones\n- Charger\n- SIM Ejector Tool\n- Warranty Card\n- Free Protective Case\n                ",
+        "metadata": {
+            "title": "Infinix Smart 9  6.7\" 3GB RAM/128GB ROM Android 14 Go Black",
+            "price": "142.001",
+            "discount": "0.29",
+            "product_url": "https://www.jumia.com.ng//infinix-smart-9-6.7-3gb-ram128gb-rom-android-14-go-black-390072379.html",
+            "image_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/97/3270093/1.jpg?1550"
+        }
+    },
+    {
+        "content": "# Product Information\n\n                ## Features\n                - **Name:** Infinix Smart 9  6.7\" 3GB RAM/128GB ROM Android 14 Go Black\n                - **Description:** No description available\n                - **Brand:** Infinix\n                - **Categories:**\n- Phones & Tablets\n- Mobile Phones\n- Smartphones\n- Android Phones\n                - **Key Features:**\n- 128GB ROM + 3GB RAM\n- 5000mAh Big Battery\n- 6.7 Inches HD+ Waterdrop Sunlight Display\n- 4G LTE\n- 13MP Dual Rear AI Camera with Flash\n- 8MP Selfie Camera with Flash\n- Android 14 Go Edition\n- Fingerprint & Face Unlock\n- Octa Core Processor\n- 12 Months Warranty\n- Free Case\n                - **Box Contents:**\n- Smart 9\n- Earphones\n- Charger\n- SIM Ejector Tool\n- Warranty Card\n- Free Protective Case\n                ",
+        "metadata": {
+            "title": "Infinix Smart 9  6.7\" 3GB RAM/128GB ROM Android 14 Go Black",
+            "price": "142.001",
+            "discount": "0.29",
+            "product_url": "https://www.jumia.com.ng//infinix-smart-9-6.7-3gb-ram128gb-rom-android-14-go-black-390072379.html",
+            "image_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/97/3270093/1.jpg?1550"
+        }
+    },
+    {
+        "content": "# Product Information\n\n                ## Features\n                - **Name:** Infinix Smart 9   6.7\" 3GB RAM/128GB ROM Android 14 Go Gold\n                - **Description:** No description available\n                - **Brand:** Infinix\n                - **Categories:**\n- Phones & Tablets\n- Mobile Phones\n- Smartphones\n- Android Phones\n                - **Key Features:**\n- 128GB ROM + 3GB RAM\n- 5000mAh Big Battery\n- 6.7 Inches HD+ Waterdrop Sunlight Display\n- 4G LTE\n- 13MP Dual Rear AI Camera with Flash\n- 8MP Selfie Camera with Flash\n- Android 14 Go Edition\n- Fingerprint & Face Unlock\n- Octa Core Processor\n- 12 Months Warranty\n- Free Case\n                - **Box Contents:**\n- Smart 9\n- Earphones\n- Charger\n- SIM Ejector Tool\n- Warranty Card\n- Free Protective Case\n                ",
+        "metadata": {
+            "title": "Infinix Smart 9   6.7\" 3GB RAM/128GB ROM Android 14 Go Gold",
+            "price": "142.001",
+            "discount": "0.29",
+            "product_url": "https://www.jumia.com.ng//infinix-smart-9-6.7-3gb-ram128gb-rom-android-14-go-gold-390152831.html",
+            "image_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/13/8251093/1.jpg?1584"
+        }
+    },
+    {
+        "content": "# Product Information\n\n                ## Features\n                - **Name:** Infinix Smart 9   6.7\" 3GB RAM/128GB ROM Android 14 Go Gold\n                - **Description:** No description available\n                - **Brand:** Infinix\n                - **Categories:**\n- Phones & Tablets\n- Mobile Phones\n- Smartphones\n- Android Phones\n                - **Key Features:**\n- 128GB ROM + 3GB RAM\n- 5000mAh Big Battery\n- 6.7 Inches HD+ Waterdrop Sunlight Display\n- 4G LTE\n- 13MP Dual Rear AI Camera with Flash\n- 8MP Selfie Camera with Flash\n- Android 14 Go Edition\n- Fingerprint & Face Unlock\n- Octa Core Processor\n- 12 Months Warranty\n- Free Case\n                - **Box Contents:**\n- Smart 9\n- Earphones\n- Charger\n- SIM Ejector Tool\n- Warranty Card\n- Free Protective Case\n                ",
+        "metadata": {
+            "title": "Infinix Smart 9   6.7\" 3GB RAM/128GB ROM Android 14 Go Gold",
+            "price": "139.955",
+            "discount": "0.3",
+            "product_url": "https://www.jumia.com.ng//infinix-smart-9-6.7-3gb-ram128gb-rom-android-14-go-gold-379792093.html",
+            "image_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/39/0297973/1.jpg?3377"
+        }
+    },
+    {
+        "content": "# Product Information\n\n                ## Features\n                - **Name:** Infinix Smart 9   6.7\" 3GB RAM/128GB ROM Android 14 Go Gold\n                - **Description:** No description available\n                - **Brand:** Infinix\n                - **Categories:**\n- Phones & Tablets\n- Mobile Phones\n- Smartphones\n- Android Phones\n                - **Key Features:**\n- 128GB ROM + 3GB RAM\n- 5000mAh Big Battery\n- 6.7 Inches HD+ Waterdrop Sunlight Display\n- 4G LTE\n- 13MP Dual Rear AI Camera with Flash\n- 8MP Selfie Camera with Flash\n- Android 14 Go Edition\n- Fingerprint & Face Unlock\n- Octa Core Processor\n- 12 Months Warranty\n- Free Case\n                - **Box Contents:**\n- Smart 9\n- Earphones\n- Charger\n- SIM Ejector Tool\n- Warranty Card\n- Free Protective Case\n                ",
+        "metadata": {
+            "title": "Infinix Smart 9   6.7\" 3GB RAM/128GB ROM Android 14 Go Gold",
+            "price": "142.001",
+            "discount": "0.29",
+            "product_url": "https://www.jumia.com.ng//infinix-smart-9-6.7-3gb-ram128gb-rom-android-14-go-gold-390152831.html",
+            "image_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/13/8251093/1.jpg?1584"
+        }
+    },
+    {
+        "content": "# Product Information\n\n                ## Features\n                - **Name:** Infinix Smart 9   6.7\" 3GB RAM/128GB ROM Android 14 Go Gold\n                - **Description:** No description available\n                - **Brand:** Infinix\n                - **Categories:**\n- Phones & Tablets\n- Mobile Phones\n- Smartphones\n- Android Phones\n                - **Key Features:**\n- 128GB ROM + 3GB RAM\n- 5000mAh Big Battery\n- 6.7 Inches HD+ Waterdrop Sunlight Display\n- 4G LTE\n- 13MP Dual Rear AI Camera with Flash\n- 8MP Selfie Camera with Flash\n- Android 14 Go Edition\n- Fingerprint & Face Unlock\n- Octa Core Processor\n- 12 Months Warranty\n- Free Case\n                - **Box Contents:**\n- Smart 9\n- Earphones\n- Charger\n- SIM Ejector Tool\n- Warranty Card\n- Free Protective Case\n                ",
+        "metadata": {
+            "title": "Infinix Smart 9   6.7\" 3GB RAM/128GB ROM Android 14 Go Gold",
+            "price": "139.955",
+            "discount": "0.3",
+            "product_url": "https://www.jumia.com.ng//infinix-smart-9-6.7-3gb-ram128gb-rom-android-14-go-gold-379792093.html",
+            "image_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/39/0297973/1.jpg?3377"
+        }
+    },
+    {
+        "content": "# Product Information\n\n                ## Features\n                - **Name:** Infinix Smart 9   6.7\" 3GB RAM/128GB ROM Android 14 Go Gold\n                - **Description:** No description available\n                - **Brand:** Infinix\n                - **Categories:**\n- Phones & Tablets\n- Mobile Phones\n- Smartphones\n- Android Phones\n                - **Key Features:**\n- 128GB ROM + 3GB RAM\n- 5000mAh Big Battery\n- 6.7 Inches HD+ Waterdrop Sunlight Display\n- 4G LTE\n- 13MP Dual Rear AI Camera with Flash\n- 8MP Selfie Camera with Flash\n- Android 14 Go Edition\n- Fingerprint & Face Unlock\n- Octa Core Processor\n- 12 Months Warranty\n- Free Case\n                - **Box Contents:**\n- Smart 9\n- Earphones\n- Charger\n- SIM Ejector Tool\n- Warranty Card\n- Free Protective Case\n                ",
+        "metadata": {
+            "title": "Infinix Smart 9   6.7\" 3GB RAM/128GB ROM Android 14 Go Gold",
+            "price": "142.001",
+            "discount": "0.29",
+            "product_url": "https://www.jumia.com.ng//infinix-smart-9-6.7-3gb-ram128gb-rom-android-14-go-gold-390152831.html",
+            "image_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/13/8251093/1.jpg?1584"
+        }
+    }
+]

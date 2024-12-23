@@ -1,3 +1,6 @@
+from typing import Optional
+from schema.apis import SearchFilter
+
 from .cache.redis import RedisCache
 from .search.query_engine import QueryEngine
 
@@ -13,11 +16,11 @@ class SearchEngineManager:
     async def search(
         self, 
         search_query: str, 
-        query, 
-        filter: str, 
-        n_k: int, 
-        mode='fast', 
-        cache_ttl=3600
+        query: Optional[str] = None, 
+        filter: Optional[SearchFilter] = None, 
+        n_k: int = 10, 
+        mode: str = 'fast', 
+        cache_ttl: int = 3600
         ):
         """
         Perform a search with caching and save results to a text file.
@@ -25,18 +28,36 @@ class SearchEngineManager:
         - Save results to cache for future use and to a text file.
         """
         import json
-
-        
         
         # Safely retrieve cached results
-        results = self.cache_manager.get(query)
+        results = self.cache_manager.get(search_query)
         if results is not None:
-            print("Cache hit for query:", query)
+            print("Cache hit for query:", search_query)
         else:
-            print("Cache miss for query:", query)
+            print("Cache miss for query:", search_query)
+            
+            # Convert SearchFilter to a format compatible with search_engine
+            search_filter = {}
+            if filter:
+                if filter.price:
+                    search_filter['price'] = {
+                        'max': filter.price.max,
+                        'min': filter.price.min
+                    }
+                if filter.attributes:
+                    search_filter['attributes'] = {
+                        'features': filter.attributes.features or [],
+                        'category': filter.attributes.category or ''
+                    }
             
             # Perform the search
-            results = await self.search_engine.asearch(search_query, query, mode, filter, n_k)
+            results = await self.search_engine.asearch(
+                search_query, 
+                query, 
+                mode, 
+                search_filter, 
+                n_k
+            )
             
             # Ensure results are not empty before caching or saving
             if results:

@@ -1,28 +1,42 @@
-from typing import Optional, List
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
+from typing import List, Dict, Optional, Any
 
-class FilterAttrubuteSchema(BaseModel):
-    features: List[str] | None = []
-    category: str | None = ""
-    brand_preferences: List[str] | None = []
+from schema import product
 
-class FilterSchema(BaseModel):
-    price: dict
-    attributes : FilterAttrubuteSchema
+class FilterAttributes(BaseModel):
+    features: Optional[List[str]] = None
+    category: Optional[str] = None
 
+class PriceFilter(BaseModel):
+    max: Optional[float] = None
+    min: Optional[float] = None
 
-# Request model for search
+class SearchFilter(BaseModel):
+    price: Optional[PriceFilter] = None
+    attributes: Optional[FilterAttributes] = None
+
 class SearchRequest(BaseModel):
-    search_query: str
-    description: Optional[str] = None
-    mode: str = 'fast'
-    filter: FilterSchema
-    n_k: int
+    search_query: str = Field(..., description="Main search query")
+    filter: Optional[SearchFilter] = None
+    n_k: int = Field(default=10, ge=1, le=50, description="Number of results to return")
+    description: Optional[str] = Field(None, description="Additional search description")
+    mode: str = Field(default="search", description="Search mode")
+    query: Optional[str] = None
+    cache_ttl: int = Field(default=3600, description="Cache time to live in seconds")
 
-# Response model for search results
+class Metadata(BaseModel):
+    title: str
+    price: float
+    discount: Optional[float]
+    product_url: str
+    image_url: str
+
+class SearchResult(BaseModel):
+    content: str
+    metadata: Metadata
+
 class SearchResponse(BaseModel):
-    results: List[dict]
+    results: List[SearchResult]
     total_results: int
     search_query: str
-    mode: str
-    time: float
+    processing_time: Optional[float] = None

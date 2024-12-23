@@ -96,8 +96,6 @@ class ShopProviderResponse:
                 metadata = {
                             "title": title,
                             "price": price,
-                            "category": categories,
-                            "features": features,
                             "discount": discount,
                             "product_url": product_url,
                             "image_url": image_url

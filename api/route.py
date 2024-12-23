@@ -33,6 +33,7 @@ async def perform_search(request: SearchRequest):
         
         # Perform the search
         time1 = time.time()
+        print(request)
         results = await manager.search(
             search_query=request.search_query, 
             query=request.description, 
@@ -54,6 +55,7 @@ async def perform_search(request: SearchRequest):
         }
     except Exception as e:
         # Handle any unexpected errors
+        print(str(e))
         raise HTTPException(status_code=500, detail=str(e))
 
 # Optional: Health check endpoint

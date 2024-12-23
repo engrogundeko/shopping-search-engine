@@ -184,22 +184,34 @@ class JumiaScraperNG(ShopEngine):
     async def run(self):
         try:
             re = await self.search()
-        except Exception as e:
-            print(f"Error occurred: {e}")
-        print(f"Search results length: {len(self.search_results)}")
-        
-        if self.search_results:
+            print(f"Search results length: {len(re)}")
+            
+            if not re:
+                print("No search results found. Unable to get detailed product.")
+                return []
+
             results = []
             for r in re:
-                result = r.__dict__
+                try:
+                    result = r.__dict__
+                    response = await self.get_detailed_product(result["product_url"])
+                    results.append(response)
+                except Exception as detail_error:
+                    print(f"Error fetching detailed product: {detail_error}")
+                    continue
 
-                response = await self.get_detailed_product(result["product_url"])
-                results.append(response)
+            if not results:
+                print("No detailed products found.")
+                return []
 
             response = ShopProviderResponse(shop_name="JumiaNG", results=results)
-            return response.parse_search_results()
-        else:
-            print("No search results found. Unable to get detailed product.")
+            parsed_results = response.parse_search_results()
+            
+            return parsed_results
+        
+        except Exception as e:
+            print(f"Unexpected error in run method: {e}")
+            return []
 
     if __name__ == "__main__":  
         asyncio.run(main())

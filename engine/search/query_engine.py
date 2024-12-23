@@ -1,4 +1,3 @@
-from dataclasses import dataclass
 from typing import List, Dict, Optional, Literal, Any
 from asyncio import to_thread
 
@@ -9,7 +8,6 @@ from .base import QueryEngineBase
 from redis import Redis
 
 from langchain.docstore.document import Document
-from redisvl.query.filter import FilterExpression
 from langchain_redis import RedisConfig, RedisVectorStore
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
 from langchain.retrievers import ContextualCompressionRetriever
@@ -41,12 +39,31 @@ class QueryEngine(QueryEngineBase):
         self.documents = []
 
     def __get_redis_config(self):
+        # Configure advanced Redis vector store settings
+        self.metadata_schema = [
+            {"name": "title", "type": "text"},
+            {"name": "price", "type": "numeric"},
+            {"name": "discount", "type": "numeric"},
+            {"name": "product_url", "type": "text"},
+            {"name": "image_url", "type": "text"}
+        ]
+        
         return RedisConfig(
             redis_client=self.redis,
             index_name=self.index_name, 
+            # Use HNSW (Hierarchical Navigable Small World) index for better performance
+            index_type="HNSW",  
+            # Configure vector similarity metric
+            distance_metric="COSINE",
+            # Advanced indexing parameters
+            index_options={
+                "M": 16,  # Maximum number of connections per element
+                "EF_CONSTRUCTION": 100,  # Size of the dynamic candidate list during construction
+            },
+            # Metadata schema for advanced filtering
             metadata_schema=self.metadata_schema, 
             embedding_model=self.embedding_model
-            )
+        )
 
     def __load_embeddings(self):
         return GoogleGenerativeAIEmbeddings(
@@ -73,6 +90,7 @@ class QueryEngine(QueryEngineBase):
                     sanitized_metadata[str(key)] = value
 
                 # Create Document with sanitized metadata
+    
                 self.documents.append(
                     Document(
                             page_content=content_dict.text, 
@@ -88,7 +106,7 @@ class QueryEngine(QueryEngineBase):
 
         # Fallback to in-memory storage if Redis is not available
         try:
-            self.vector_store = await to_thread(
+            self.vectorstore  = await to_thread(
                 RedisVectorStore.from_documents,
                 documents=self.documents,
                 embedding=self.embeddings,
@@ -104,7 +122,7 @@ class QueryEngine(QueryEngineBase):
                 embedding=self.embeddings
             )
 
-        return self.vector_store
+        return self.vectorstore 
     
     def keyword_retriever(self):
         """Perform a simple keyword-based search."""
@@ -152,19 +170,19 @@ class QueryEngine(QueryEngineBase):
             if 'max' in price_filter:
                 filtered_results = [
                     result for result in filtered_results 
-                    if result.get('price', float('inf')) <= price_filter['max']
+                    if float(result.get('price', float('inf'))) <= price_filter['max']
                 ]
         
         # Attributes filtering
         if 'attributes' in filter_criteria:
             attributes = filter_criteria['attributes']
             
-            # Category filtering
-            if 'category' in attributes:
-                filtered_results = [
-                    result for result in filtered_results
-                    if result.get('category', '').lower() == attributes['category'].lower()
-                ]
+            # # Category filtering
+            # if 'category' in attributes:
+            #     filtered_results = [
+            #         result for result in filtered_results 
+            #         if float(result.get('price', float('inf'))) <= price_filter['max']
+            #     ]
             
             # Features filtering
             if 'features' in attributes:
@@ -184,21 +202,12 @@ class QueryEngine(QueryEngineBase):
         filter: Dict[str, Any] = None, 
         k: int = 5
     ):
-        """
-        Perform a search with optional metadata filtering.
+        results = await get_all_results(search_query)
         
-        Args:
-            search_query (str): The search query string
-            query (str): The query for retrieval
-            mode (str, optional): Search mode. Defaults to 'quality'.
-            filter (Dict[str, Any], optional): Filter criteria for results. Defaults to None.
-            k (int, optional): Number of results to retrieve. Defaults to 5.
-        
-        Returns:
-            List[Dict[str, Any]]: Filtered and ranked search results
-        """
-        n_k += 5
-        # Perform initial search
+        # Load contents into vector store
+        await self.aload_contents(results)
+        # print(self.vectorstore.i\)
+
         if mode == 'quality':
             retriever = EnsembleRetriever(
                 retrievers=[
@@ -223,10 +232,14 @@ class QueryEngine(QueryEngineBase):
             raise ValueError("Invalid mode. Choose 'fast', 'balanced', or 'quality'.")
 
         # Convert documents to dictionaries
-        results = [doc.metadata for doc in docs]
+        results = [{
+            "content": doc.page_content,
+            "metadata": doc.metadata
+        } for doc in docs]
         
         # Apply additional filtering if filter criteria are provided
         if filter:
-            results = self.filter_results(results, filter)
-        
+            rs = self.filter_results(results, filter)
+            if rs is not None and len(rs) > 0:
+                return rs
         return results
