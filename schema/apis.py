@@ -1,7 +1,6 @@
-from pydantic import BaseModel, Field
-from typing import List, Dict, Optional, Any
+from pydantic import BaseModel, Field, field_validator
+from typing import List, Optional
 
-from schema import product
 
 class FilterAttributes(BaseModel):
     features: Optional[List[str]] = None
@@ -26,10 +25,30 @@ class SearchRequest(BaseModel):
 
 class Metadata(BaseModel):
     title: str
-    price: float
-    discount: Optional[float]
-    product_url: str
-    image_url: str
+    price: float = 0.0
+    discount: Optional[float] = 0.0
+    image_url: Optional[str] = None
+    product_url: Optional[str] = None
+
+    @field_validator('price', mode='before')
+    def parse_price(cls, v):
+        from providers.jumia.utils import parse_price
+        if isinstance(v, str):
+            try:
+                return parse_price(v)
+            except ValueError:
+                return 0.0
+        return v
+
+    @field_validator('discount', mode='before')
+    def parse_discount(cls, v):
+        from providers.jumia.utils import parse_discount
+        if isinstance(v, str):
+            try:
+                return parse_discount(v)
+            except ValueError:
+                return 0.0
+        return v
 
 class SearchResult(BaseModel):
     content: str

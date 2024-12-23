@@ -66,10 +66,8 @@ class ShopProviderResponse:
             try:
                 # Safely extract product information with default values
                 title = product.get('prices', {}).get('name', 'Unknown Product')
-                discount = product.get('prices', {}).get('discount', '0%')
-                price = product.get('prices', {}).get('current_price', 'N/A')
-                old_price = product.get('prices', {}).get('old_price', 'N/A')
-
+                discount = product.get('prices', {}).get('discount', 0.0)
+                price = product.get('prices', {}).get('current_price', 0.0)
                 # Safely extract features, categories, and box contents
                 specifications = product.get('specifications', {})
                 product_info = product.get('product', {})

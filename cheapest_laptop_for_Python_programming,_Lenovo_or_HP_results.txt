@@ -1,0 +1,52 @@
+[
+    {
+        "content": "# Product Information\n\n                ## Features\n                - **Name:** Hp CHROMEBOOK, INTEL CELERON, 4GB RAM,16GB EMMC + BAG\n                - **Description:** No description available\n                - **Brand:** Hp\n                - **Categories:**\n- Computing\n- Computers & Accessories\n- Computers & Tablets\n- Laptops\n                - **Key Features:**\n- Operating system: Chrome\n- Processor: Intel Celeron N2846\n- Display: 11.0-inch diagonal, HD (1366 x 768), micro-edge, BrightView\n- Memory: 4 GB LPDDR3-2400 SDRAM (onboard)\n- Internal storage: 16 GB eMMC\n- Graphics: Intel UHD Graphics 600\n- Battery life: Up to 12 hours and 30 minutes (mixed usage)\n- Wireless: Realtek RTL8822CE 802.11a/b/g/n/ac (2x2) Wi-Fi and Bluetooth 5.0 combo\n- Camera: HP Wide Vision 720p HD camera with integrated dual array digital microphones\n                - **Box Contents:**\n\n\n                ## Pricing and Discounts\n                - **Current Price:** \u20a6 120,000\n                - **Old Price:** \u20a6 140,000\n                - **Discount:** 14%\n                ",
+        "metadata": {
+            "title": "Hp CHROMEBOOK, INTEL CELERON, 4GB RAM,16GB EMMC + BAG",
+            "price": "\u20a6 120,000",
+            "discount": "14%",
+            "product_url": "https://www.jumia.com.ng//chromebook-intel-celeron-4gb-ram16gb-emmc-bag-hp-mpg3588057.html",
+            "image_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/98/3462691/1.jpg?1813"
+        }
+    },
+    {
+        "content": "# Product Information\n\n                ## Features\n                - **Name:** Hp CHROMEBOOK11, CELERON, 4GB RAM,16GB SSD + 32GBFLASH\n                - **Description:** No description available\n                - **Brand:** Hp\n                - **Categories:**\n- Computing\n- Computers & Accessories\n- Computers & Tablets\n- Laptops\n                - **Key Features:**\n- Operating system: Chrome\n- Processor: Intel Celeron N2846\n- Display: 11.0-inch diagonal, HD (1366 x 768), micro-edge, BrightView\n- Memory: 4 GB LPDDR3-2400 SDRAM (onboard)\n- Internal storage: 16 GB eMMC\n- Graphics: Intel UHD Graphics 600\n- Battery life: Up to 12 hours and 30 minutes (mixed usage)\n- Wireless: Realtek RTL8822CE 802.11a/b/g/n/ac (2x2) Wi-Fi and Bluetooth 5.0 combo\n- Camera: HP Wide Vision 720p HD camera with integrated dual array digital microphones\n                - **Box Contents:**\n\n\n                ## Pricing and Discounts\n                - **Current Price:** \u20a6 120,000\n                - **Old Price:** \u20a6 240,000\n                - **Discount:** 50%\n                ",
+        "metadata": {
+            "title": "Hp CHROMEBOOK11, CELERON, 4GB RAM,16GB SSD + 32GBFLASH",
+            "price": "\u20a6 120,000",
+            "discount": "50%",
+            "product_url": "https://www.jumia.com.ng//chromebook11-celeron-4gb-ram16gb-ssd-32gbflash-hp-mpg8253521.html",
+            "image_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/10/1295051/1.jpg?8729"
+        }
+    },
+    {
+        "content": "# Product Information\n\n                ## Features\n                - **Name:** Hp CHROMEBOOK 11 G4, CELERON, 4GB RAM,16GB SSD + BAG\n                - **Description:** No description available\n                - **Brand:** Hp\n                - **Categories:**\n- Computing\n- Computers & Accessories\n- Computers & Tablets\n- Laptops\n                - **Key Features:**\n- Operating system: Chrome\n- Processor: Intel Celeron N2846\n- Display: 11.0-inch diagonal, HD (1366 x 768), micro-edge, BrightView\n- Memory: 4 GB LPDDR3-2400 SDRAM (onboard)\n- Internal storage: 16 GB eMMC\n- Graphics: Intel UHD Graphics 600\n- Battery life: Up to 12 hours and 30 minutes (mixed usage)\n- Wireless: Realtek RTL8822CE 802.11a/b/g/n/ac (2x2) Wi-Fi and Bluetooth 5.0 combo\n- Camera: HP Wide Vision 720p HD camera with integrated dual array digital microphones\n                - **Box Contents:**\n\n\n                ## Pricing and Discounts\n                - **Current Price:** \u20a6 120,000\n                - **Old Price:** \u20a6 220,000\n                - **Discount:** 45%\n                ",
+        "metadata": {
+            "title": "Hp CHROMEBOOK 11 G4, CELERON, 4GB RAM,16GB SSD + BAG",
+            "price": "\u20a6 120,000",
+            "discount": "45%",
+            "product_url": "https://www.jumia.com.ng//chromebook11-celeron-4gb-ram16gb-ssd-bag-hp-mpg3588053.html",
+            "image_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/76/8795051/1.jpg?4488"
+        }
+    },
+    {
+        "content": "# Product Information\n\n                ## Features\n                - **Name:** Hp Stream 11 Laptop- Intel Celeron - 64GB SSD 4GB RAM Windows 10 PRO+ Mouse & USB Light For Keyboard\n                - **Description:** No description available\n                - **Brand:** Hp\n                - **Categories:**\n- Computing\n- Computers & Accessories\n- Computers & Tablets\n- Laptops\n                - **Key Features:**\n- STREAM 11 NOTEBOOK\n- INTEL CELERON FAST PROCESSOR\n- 64GB STORAGE SPACE\n- 4GB RAM\n- 1TB OF OneDrive Cloud Storage\n- Thinner, Lighter Design\n- Fast, Durable And Mobile\n                - **Box Contents:**\n\n\n                ## Pricing and Discounts\n                - **Current Price:** \u20a6 190,000\n                - **Old Price:** \u20a6 300,000\n                - **Discount:** 37%\n                ",
+        "metadata": {
+            "title": "Hp Stream 11 Laptop- Intel Celeron - 64GB SSD 4GB RAM Windows 10 PRO+ Mouse & USB Light For Keyboard",
+            "price": "\u20a6 190,000",
+            "discount": "37%",
+            "product_url": "https://www.jumia.com.ng//hp-stream-11-laptop-intel-celeron-64gb-ssd-4gb-ram-windows-10-pro-mouse-usb-light-for-keyboard-319828265.html",
+            "image_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/56/2828913/1.jpg?6186"
+        }
+    },
+    {
+        "content": "# Product Information\n\n                ## Features\n                - **Name:** Hp Stream 11 Laptop- Intel Celeron - 64GB SSD 4GB RAM Windows 10 PRO+ Mouse & USB Light For Keyboard\n                - **Description:** No description available\n                - **Brand:** Hp\n                - **Categories:**\n- Computing\n- Computers & Accessories\n- Computers & Tablets\n- Laptops\n                - **Key Features:**\n- STREAM 11 NOTEBOOK\n- INTEL CELERON FAST PROCESSOR\n- 64GB STORAGE SPACE\n- 4GB RAM\n- 1TB OF OneDrive Cloud Storage\n- Thinner, Lighter Design\n- Fast, Durable And Mobile\n                - **Box Contents:**\n\n\n                ## Pricing and Discounts\n                - **Current Price:** \u20a6 190,000\n                - **Old Price:** \u20a6 300,000\n                - **Discount:** 37%\n                ",
+        "metadata": {
+            "title": "Hp Stream 11 Laptop- Intel Celeron - 64GB SSD 4GB RAM Windows 10 PRO+ Mouse & USB Light For Keyboard",
+            "price": "\u20a6 190,000",
+            "discount": "37%",
+            "product_url": "https://www.jumia.com.ng//hp-stream-11-laptop-intel-celeron-64gb-ssd-4gb-ram-windows-10-pro-mouse-usb-light-for-keyboard-319828265.html",
+            "image_url": "https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/56/2828913/1.jpg?6186"
+        }
+    }
+]

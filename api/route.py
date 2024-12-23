@@ -33,7 +33,6 @@ async def perform_search(request: SearchRequest):
         
         # Perform the search
         time1 = time.time()
-        print(request)
         results = await manager.search(
             search_query=request.search_query, 
             query=request.description, 
@@ -54,10 +53,13 @@ async def perform_search(request: SearchRequest):
             "time": time2-time1
         }
     except Exception as e:
-        # Handle any unexpected errors
-        print(str(e))
-        raise HTTPException(status_code=500, detail=str(e))
-
+        import traceback
+        error_trace = traceback.format_exc()
+        print(f"Full Error Traceback:\n{error_trace}")
+        raise HTTPException(
+            status_code=500, 
+            detail=f"Search failed: {str(e)}\n\nFull Traceback: {error_trace}"
+        )
 # Optional: Health check endpoint
 @router.get("/health")
 async def health_check():

@@ -71,6 +71,24 @@ class QueryEngine(QueryEngineBase):
             google_api_key=GEMINI_API_KEY
             )
 
+    def _sanitize_numeric_field(self, value):
+        """
+        Convert string numeric values to float, handling currency and percentage symbols
+        """
+        if isinstance(value, (int, float)):
+            return float(value)
+        
+        if not isinstance(value, str):
+            return 0.0
+        
+        # Remove currency symbols, commas, and percentage signs
+        value = value.replace('₦', '').replace(',', '').replace('%', '').strip()
+        
+        try:
+            return float(value)
+        except ValueError:
+            return 0.0
+
     async def aload_contents(self, contents: ContentSchema) -> Any:
         self.documents = []
         for content_dict in contents.contents:  
@@ -89,6 +107,14 @@ class QueryEngine(QueryEngineBase):
                     # Ensure key is a string
                     sanitized_metadata[str(key)] = value
 
+                    # Sanitize numeric fields
+                    sanitized_metadata['price'] = self._sanitize_numeric_field(content_dict.metadata.get('price', 0.0))
+                    sanitized_metadata['discount'] = self._sanitize_numeric_field(content_dict.metadata.get('discount', 0.0))
+                    
+                    # Add other metadata fields
+                    for key in ['title', 'product_url', 'image_url']:
+                        sanitized_metadata[key] = str(content_dict.metadata.get(key, ''))
+
                 # Create Document with sanitized metadata
     
                 self.documents.append(
@@ -106,6 +132,7 @@ class QueryEngine(QueryEngineBase):
 
         # Fallback to in-memory storage if Redis is not available
         try:
+            print(self.documents)
             self.vectorstore  = await to_thread(
                 RedisVectorStore.from_documents,
                 documents=self.documents,
@@ -173,9 +200,9 @@ class QueryEngine(QueryEngineBase):
                     if float(result.get('price', float('inf'))) <= price_filter['max']
                 ]
         
-        # Attributes filtering
-        if 'attributes' in filter_criteria:
-            attributes = filter_criteria['attributes']
+        # # Attributes filtering
+        # if 'attributes' in filter_criteria:
+        #     attributes = filter_criteria['attributes']
             
             # # Category filtering
             # if 'category' in attributes:
@@ -184,13 +211,13 @@ class QueryEngine(QueryEngineBase):
             #         if float(result.get('price', float('inf'))) <= price_filter['max']
             #     ]
             
-            # Features filtering
-            if 'features' in attributes:
-                required_features = set(attributes['features'])
-                filtered_results = [
-                    result for result in filtered_results
-                    if required_features.issubset(set(result.get('features', [])))
-                ]
+            # # Features filtering
+            # if 'features' in attributes:
+            #     required_features = set(attributes['features'])
+            #     filtered_results = [
+            #         result for result in filtered_results
+            #         if required_features.issubset(set(result.get('features', [])))
+            #     ]
         
         return filtered_results
 
@@ -239,7 +266,9 @@ class QueryEngine(QueryEngineBase):
         
         # Apply additional filtering if filter criteria are provided
         if filter:
+            print("============================")
             rs = self.filter_results(results, filter)
             if rs is not None and len(rs) > 0:
                 return rs
+        print("============================")
         return results
