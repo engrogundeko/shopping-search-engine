@@ -59,22 +59,22 @@ class SearchEngineManager:
                 n_k
             )
             
-            # Ensure results are not empty before caching or saving
-            if results:
-                try:
-                    # Cache the results
-                    await self.cache_manager.set(query, results, ttl=cache_ttl)
-                except Exception as e:
-                    print(f"Error caching results: {e}")
+            # # Ensure results are not empty before caching or saving
+            # if results:
+            #     # try:
+            #     #     # Cache the results
+            #     #     await self.cache_manager.set(query, results, ttl=cache_ttl)
+            #     # except Exception as e:
+            #     #     print(f"Error caching results: {e}")
                 
-                try:
-                    # Save results to a text file
-                    file_path = f"{query.replace(' ', '_')}_results.txt"
-                    with open(file_path, 'w', encoding='utf-8') as file:
-                        file.write(json.dumps(results, indent=4))
-                    print(f"Results saved to file: {file_path}")
-                except Exception as e:
-                    print(f"Error saving results to file: {e}")
+            #     try:
+            #         # Save results to a text file
+            #         file_path = f"{query.replace(' ', '_')}_results.txt"
+            #         with open(file_path, 'w', encoding='utf-8') as file:
+            #             file.write(json.dumps(results, indent=4))
+            #         print(f"Results saved to file: {file_path}")
+            #     except Exception as e:
+            #         print(f"Error saving results to file: {e}")
 
         return results
 

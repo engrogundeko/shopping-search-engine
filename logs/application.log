@@ -1,0 +1,255 @@
+2024-12-30 17:39:02 - WARNING - decourator.py:67 - Retry 1/3 for search after error: list index out of range
+2024-12-30 17:39:04 - WARNING - decourator.py:67 - Retry 2/3 for search after error: list index out of range
+2024-12-30 17:43:17 - INFO - manager.py:91 - Number of search results: 37
+2024-12-30 17:43:17 - INFO - manager.py:36 - Number of documents to load: 37
+2024-12-30 17:43:20 - WARNING - decourator.py:67 - Retry 1/3 for search after error: AsyncWebManager.insights_search() takes 2 positional arguments but 3 were given
+2024-12-30 17:43:23 - INFO - manager.py:91 - Number of search results: 37
+2024-12-30 17:43:23 - INFO - manager.py:36 - Number of documents to load: 37
+2024-12-30 17:43:25 - WARNING - decourator.py:67 - Retry 2/3 for search after error: AsyncWebManager.insights_search() takes 2 positional arguments but 3 were given
+2024-12-30 17:43:30 - INFO - manager.py:91 - Number of search results: 37
+2024-12-30 17:43:30 - INFO - manager.py:36 - Number of documents to load: 37
+2024-12-30 17:45:22 - INFO - manager.py:91 - Number of search results: 0
+2024-12-30 17:45:22 - INFO - manager.py:36 - Number of documents to load: 0
+2024-12-30 17:45:22 - WARNING - decourator.py:67 - Retry 1/3 for search after error: No documents provided for loading contents.
+2024-12-30 17:45:24 - INFO - manager.py:91 - Number of search results: 0
+2024-12-30 17:45:24 - INFO - manager.py:36 - Number of documents to load: 0
+2024-12-30 17:45:24 - WARNING - decourator.py:67 - Retry 2/3 for search after error: No documents provided for loading contents.
+2024-12-30 17:45:27 - INFO - manager.py:91 - Number of search results: 0
+2024-12-30 17:45:27 - INFO - manager.py:36 - Number of documents to load: 0
+2024-12-30 17:48:50 - INFO - searxng.py:114 - Number of search results: 36
+2024-12-30 17:48:50 - INFO - manager.py:36 - Number of documents to load: 36
+2024-12-30 17:59:29 - INFO - searxng.py:114 - Number of search results: 36
+2024-12-30 17:59:29 - INFO - manager.py:36 - Number of documents to load: 36
+2024-12-30 18:05:33 - INFO - searxng.py:114 - Number of search results: 0
+2024-12-30 18:05:33 - INFO - manager.py:36 - Number of documents to load: 0
+2024-12-30 18:05:33 - WARNING - decourator.py:67 - Retry 1/3 for search after error: No documents provided for loading contents.
+2024-12-30 18:05:35 - INFO - searxng.py:114 - Number of search results: 0
+2024-12-30 18:05:35 - INFO - manager.py:36 - Number of documents to load: 0
+2024-12-30 18:05:35 - WARNING - decourator.py:67 - Retry 2/3 for search after error: No documents provided for loading contents.
+2024-12-30 18:05:39 - INFO - searxng.py:114 - Number of search results: 20
+2024-12-30 18:05:39 - INFO - manager.py:36 - Number of documents to load: 20
+2024-12-30 18:14:43 - INFO - searxng.py:114 - Number of search results: 0
+2024-12-30 18:14:43 - INFO - manager.py:38 - Number of documents to load: 0
+2024-12-30 18:14:43 - WARNING - decourator.py:67 - Retry 1/5 for search after error: No documents provided for loading contents.
+2024-12-30 18:14:45 - INFO - searxng.py:114 - Number of search results: 0
+2024-12-30 18:14:45 - INFO - manager.py:38 - Number of documents to load: 0
+2024-12-30 18:14:45 - WARNING - decourator.py:67 - Retry 2/5 for search after error: No documents provided for loading contents.
+2024-12-30 18:14:48 - INFO - searxng.py:114 - Number of search results: 0
+2024-12-30 18:14:48 - INFO - manager.py:38 - Number of documents to load: 0
+2024-12-30 18:14:48 - WARNING - decourator.py:67 - Retry 3/5 for search after error: No documents provided for loading contents.
+2024-12-30 18:14:56 - INFO - searxng.py:114 - Number of search results: 0
+2024-12-30 18:14:56 - INFO - manager.py:38 - Number of documents to load: 0
+2024-12-30 18:14:56 - WARNING - decourator.py:67 - Retry 4/5 for search after error: No documents provided for loading contents.
+2024-12-30 18:15:08 - INFO - searxng.py:114 - Number of search results: 0
+2024-12-30 18:15:08 - INFO - manager.py:38 - Number of documents to load: 0
+2024-12-30 18:16:41 - INFO - searxng.py:114 - Number of search results: 0
+2024-12-30 18:16:41 - INFO - manager.py:38 - Number of documents to load: 0
+2024-12-30 18:16:41 - WARNING - decourator.py:67 - Retry 1/5 for search after error: No documents provided for loading contents.
+2024-12-30 18:16:43 - INFO - searxng.py:114 - Number of search results: 0
+2024-12-30 18:16:43 - INFO - manager.py:38 - Number of documents to load: 0
+2024-12-30 18:16:43 - WARNING - decourator.py:67 - Retry 2/5 for search after error: No documents provided for loading contents.
+2024-12-30 18:16:46 - INFO - searxng.py:114 - Number of search results: 0
+2024-12-30 18:16:46 - INFO - manager.py:38 - Number of documents to load: 0
+2024-12-30 18:16:46 - WARNING - decourator.py:67 - Retry 3/5 for search after error: No documents provided for loading contents.
+2024-12-30 18:16:51 - INFO - searxng.py:114 - Number of search results: 0
+2024-12-30 18:16:51 - INFO - manager.py:38 - Number of documents to load: 0
+2024-12-30 18:16:51 - WARNING - decourator.py:67 - Retry 4/5 for search after error: No documents provided for loading contents.
+2024-12-30 18:17:03 - INFO - searxng.py:114 - Number of search results: 0
+2024-12-30 18:17:03 - INFO - manager.py:38 - Number of documents to load: 0
+2024-12-30 18:19:41 - INFO - searxng.py:114 - Number of search results: 0
+2024-12-30 18:19:41 - INFO - manager.py:38 - Number of documents to load: 0
+2024-12-30 18:19:41 - WARNING - decourator.py:67 - Retry 1/5 for search after error: No documents provided for loading contents.
+2024-12-30 18:19:43 - INFO - searxng.py:114 - Number of search results: 0
+2024-12-30 18:19:43 - INFO - manager.py:38 - Number of documents to load: 0
+2024-12-30 18:19:43 - WARNING - decourator.py:67 - Retry 2/5 for search after error: No documents provided for loading contents.
+2024-12-30 18:19:46 - INFO - searxng.py:114 - Number of search results: 0
+2024-12-30 18:19:46 - INFO - manager.py:38 - Number of documents to load: 0
+2024-12-30 18:19:46 - WARNING - decourator.py:67 - Retry 3/5 for search after error: No documents provided for loading contents.
+2024-12-30 18:19:51 - INFO - searxng.py:114 - Number of search results: 0
+2024-12-30 18:19:51 - INFO - manager.py:38 - Number of documents to load: 0
+2024-12-30 18:19:51 - WARNING - decourator.py:67 - Retry 4/5 for search after error: No documents provided for loading contents.
+2024-12-30 18:20:00 - INFO - searxng.py:114 - Number of search results: 0
+2024-12-30 18:20:00 - INFO - manager.py:38 - Number of documents to load: 0
+2024-12-30 18:22:53 - INFO - searxng.py:114 - Number of search results: 36
+2024-12-30 18:22:53 - INFO - manager.py:38 - Number of documents to load: 36
+2024-12-30 18:25:07 - INFO - searxng.py:114 - Number of search results: 36
+2024-12-30 18:25:07 - INFO - manager.py:38 - Number of documents to load: 36
+2024-12-30 18:28:33 - INFO - searxng.py:114 - Number of search results: 36
+2024-12-30 18:28:33 - INFO - manager.py:38 - Number of documents to load: 36
+2024-12-30 18:31:24 - INFO - searxng.py:114 - Number of search results: 0
+2024-12-30 18:31:24 - INFO - manager.py:38 - Number of documents to load: 0
+2024-12-30 18:31:24 - WARNING - decourator.py:67 - Retry 1/5 for search after error: No documents provided for loading contents.
+2024-12-30 18:31:26 - INFO - searxng.py:114 - Number of search results: 0
+2024-12-30 18:31:26 - INFO - manager.py:38 - Number of documents to load: 0
+2024-12-30 18:31:26 - WARNING - decourator.py:67 - Retry 2/5 for search after error: No documents provided for loading contents.
+2024-12-30 18:31:29 - INFO - searxng.py:114 - Number of search results: 0
+2024-12-30 18:31:29 - INFO - manager.py:38 - Number of documents to load: 0
+2024-12-30 18:31:29 - WARNING - decourator.py:67 - Retry 3/5 for search after error: No documents provided for loading contents.
+2024-12-30 18:31:35 - INFO - searxng.py:114 - Number of search results: 36
+2024-12-30 18:31:35 - INFO - manager.py:38 - Number of documents to load: 36
+2024-12-30 18:32:37 - INFO - searxng.py:114 - Number of search results: 0
+2024-12-30 18:32:37 - INFO - manager.py:38 - Number of documents to load: 0
+2024-12-30 18:32:37 - WARNING - decourator.py:67 - Retry 1/5 for search after error: No documents provided for loading contents.
+2024-12-30 18:32:39 - INFO - searxng.py:114 - Number of search results: 0
+2024-12-30 18:32:39 - INFO - manager.py:38 - Number of documents to load: 0
+2024-12-30 18:32:39 - WARNING - decourator.py:67 - Retry 2/5 for search after error: No documents provided for loading contents.
+2024-12-30 18:32:43 - INFO - searxng.py:114 - Number of search results: 0
+2024-12-30 18:32:43 - INFO - manager.py:38 - Number of documents to load: 0
+2024-12-30 18:32:43 - WARNING - decourator.py:67 - Retry 3/5 for search after error: No documents provided for loading contents.
+2024-12-30 18:32:50 - INFO - searxng.py:114 - Number of search results: 36
+2024-12-30 18:32:50 - INFO - manager.py:38 - Number of documents to load: 36
+2024-12-30 21:31:02 - INFO - searxng.py:114 - Number of search results: 0
+2024-12-30 21:31:02 - INFO - manager.py:58 - Number of documents to load: 0
+2024-12-30 21:31:02 - WARNING - decourator.py:67 - Retry 1/5 for search after error: No documents provided for loading contents.
+2024-12-30 21:31:04 - INFO - searxng.py:114 - Number of search results: 0
+2024-12-30 21:31:04 - INFO - manager.py:58 - Number of documents to load: 0
+2024-12-30 21:31:04 - WARNING - decourator.py:67 - Retry 2/5 for search after error: No documents provided for loading contents.
+2024-12-30 21:31:07 - INFO - searxng.py:114 - Number of search results: 0
+2024-12-30 21:31:07 - INFO - manager.py:58 - Number of documents to load: 0
+2024-12-30 21:31:07 - WARNING - decourator.py:67 - Retry 3/5 for search after error: No documents provided for loading contents.
+2024-12-30 21:31:15 - INFO - searxng.py:114 - Number of search results: 0
+2024-12-30 21:31:15 - INFO - manager.py:58 - Number of documents to load: 0
+2024-12-30 21:31:15 - WARNING - decourator.py:67 - Retry 4/5 for search after error: No documents provided for loading contents.
+2024-12-30 21:31:24 - INFO - searxng.py:114 - Number of search results: 0
+2024-12-30 21:31:24 - INFO - manager.py:58 - Number of documents to load: 0
+2024-12-30 21:31:57 - INFO - searxng.py:114 - Number of search results: 36
+2024-12-30 21:31:57 - INFO - manager.py:58 - Number of documents to load: 36
+2024-12-30 21:34:36 - INFO - searxng.py:114 - Number of search results: 36
+2024-12-30 21:34:36 - INFO - manager.py:58 - Number of documents to load: 36
+2024-12-30 21:40:44 - INFO - searxng.py:114 - Number of search results: 36
+2024-12-30 21:40:44 - INFO - manager.py:58 - Number of documents to load: 36
+2024-12-30 21:40:48 - WARNING - decourator.py:67 - Retry 1/5 for search after error: playwright is required for AsyncChromiumLoader. Please install it with `pip install playwright`.
+2024-12-30 21:40:52 - INFO - searxng.py:114 - Number of search results: 36
+2024-12-30 21:40:52 - INFO - manager.py:58 - Number of documents to load: 36
+2024-12-30 21:40:54 - WARNING - decourator.py:67 - Retry 2/5 for search after error: playwright is required for AsyncChromiumLoader. Please install it with `pip install playwright`.
+2024-12-30 21:40:59 - INFO - searxng.py:114 - Number of search results: 36
+2024-12-30 21:40:59 - INFO - manager.py:58 - Number of documents to load: 36
+2024-12-30 21:41:01 - WARNING - decourator.py:67 - Retry 3/5 for search after error: playwright is required for AsyncChromiumLoader. Please install it with `pip install playwright`.
+2024-12-30 21:41:08 - INFO - searxng.py:114 - Number of search results: 36
+2024-12-30 21:41:08 - INFO - manager.py:58 - Number of documents to load: 36
+2024-12-30 21:41:10 - WARNING - decourator.py:67 - Retry 4/5 for search after error: playwright is required for AsyncChromiumLoader. Please install it with `pip install playwright`.
+2024-12-30 21:41:21 - INFO - searxng.py:114 - Number of search results: 36
+2024-12-30 21:41:21 - INFO - manager.py:58 - Number of documents to load: 36
+2024-12-30 21:44:54 - INFO - searxng.py:114 - Number of search results: 36
+2024-12-30 21:44:54 - INFO - manager.py:58 - Number of documents to load: 36
+2024-12-30 21:45:35 - INFO - searxng.py:114 - Number of search results: 36
+2024-12-30 21:45:35 - INFO - manager.py:58 - Number of documents to load: 36
+2024-12-30 21:45:45 - INFO - searxng.py:114 - Number of search results: 36
+2024-12-30 21:45:45 - INFO - manager.py:58 - Number of documents to load: 36
+2024-12-30 21:45:56 - INFO - searxng.py:114 - Number of search results: 36
+2024-12-30 21:45:56 - INFO - manager.py:58 - Number of documents to load: 36
+2024-12-30 21:48:06 - INFO - searxng.py:114 - Number of search results: 36
+2024-12-30 21:48:06 - INFO - manager.py:58 - Number of documents to load: 36
+2024-12-30 22:02:43 - INFO - searxng.py:114 - Number of search results: 36
+2024-12-30 22:02:43 - INFO - manager.py:58 - Number of documents to load: 36
+2024-12-30 22:02:55 - ERROR - manager.py:114 - Error extracting content: Unexpected response from gemini 404, body:
+{
+  "error": {
+    "code": 404,
+    "message": "models/gemini-2.0-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+2024-12-30 22:02:55 - ERROR - manager.py:114 - Error extracting content: Unexpected response from gemini 404, body:
+{
+  "error": {
+    "code": 404,
+    "message": "models/gemini-2.0-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+2024-12-30 22:02:55 - ERROR - manager.py:114 - Error extracting content: Unexpected response from gemini 404, body:
+{
+  "error": {
+    "code": 404,
+    "message": "models/gemini-2.0-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+2024-12-30 22:02:56 - ERROR - manager.py:114 - Error extracting content: Unexpected response from gemini 404, body:
+{
+  "error": {
+    "code": 404,
+    "message": "models/gemini-2.0-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+2024-12-30 22:02:56 - ERROR - manager.py:114 - Error extracting content: Unexpected response from gemini 404, body:
+{
+  "error": {
+    "code": 404,
+    "message": "models/gemini-2.0-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+2024-12-30 22:04:03 - INFO - searxng.py:114 - Number of search results: 36
+2024-12-30 22:04:03 - INFO - manager.py:58 - Number of documents to load: 36
+2024-12-30 22:04:32 - ERROR - manager.py:114 - Error extracting content: 2 validation errors for typed-dict
+candidates.0.content
+  Field required [type=missing, input_value={'finishReason': 'MALFORMED_FUNCTION_CALL'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+candidates.0.finishReason
+  Input should be 'STOP' [type=literal_error, input_value='MALFORMED_FUNCTION_CALL', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.10/v/literal_error
+2024-12-30 22:24:08 - INFO - searxng.py:114 - Number of search results: 0
+2024-12-30 22:24:08 - INFO - manager.py:58 - Number of documents to load: 0
+2024-12-30 22:24:08 - WARNING - decourator.py:67 - Retry 1/5 for search after error: No documents provided for loading contents.
+2024-12-30 22:24:10 - INFO - searxng.py:114 - Number of search results: 0
+2024-12-30 22:24:10 - INFO - manager.py:58 - Number of documents to load: 0
+2024-12-30 22:24:10 - WARNING - decourator.py:67 - Retry 2/5 for search after error: No documents provided for loading contents.
+2024-12-30 22:24:13 - INFO - searxng.py:114 - Number of search results: 0
+2024-12-30 22:24:13 - INFO - manager.py:58 - Number of documents to load: 0
+2024-12-30 22:24:13 - WARNING - decourator.py:67 - Retry 3/5 for search after error: No documents provided for loading contents.
+2024-12-30 22:24:21 - INFO - searxng.py:114 - Number of search results: 0
+2024-12-30 22:24:21 - INFO - manager.py:58 - Number of documents to load: 0
+2024-12-30 22:24:21 - WARNING - decourator.py:67 - Retry 4/5 for search after error: No documents provided for loading contents.
+2024-12-30 22:24:33 - INFO - searxng.py:114 - Number of search results: 36
+2024-12-30 22:24:33 - INFO - manager.py:58 - Number of documents to load: 36
+2024-12-30 22:37:30 - INFO - searxng.py:114 - Number of search results: 36
+2024-12-30 22:37:30 - INFO - manager.py:59 - Number of documents to load: 36
+2024-12-30 22:37:34 - WARNING - decourator.py:67 - Retry 1/5 for search after error: name 'Tr' is not defined
+2024-12-30 22:37:38 - INFO - searxng.py:114 - Number of search results: 36
+2024-12-30 22:37:38 - INFO - manager.py:59 - Number of documents to load: 36
+2024-12-30 22:37:40 - WARNING - decourator.py:67 - Retry 2/5 for search after error: name 'Tr' is not defined
+2024-12-30 22:37:45 - INFO - searxng.py:114 - Number of search results: 36
+2024-12-30 22:37:45 - INFO - manager.py:59 - Number of documents to load: 36
+2024-12-30 22:37:47 - WARNING - decourator.py:67 - Retry 3/5 for search after error: name 'Tr' is not defined
+2024-12-30 22:41:57 - INFO - searxng.py:114 - Number of search results: 36
+2024-12-30 22:41:57 - INFO - manager.py:59 - Number of documents to load: 36
+2024-12-31 08:11:35 - INFO - searxng.py:114 - Number of search results: 0
+2024-12-31 08:11:35 - INFO - manager.py:70 - Number of documents to load: 0
+2024-12-31 08:11:35 - ERROR - manager.py:80 - Error creating FAISS vectorstore: list index out of range
+2024-12-31 08:11:35 - WARNING - decourator.py:67 - Retry 1/5 for search after error: list index out of range
+2024-12-31 08:11:37 - INFO - searxng.py:114 - Number of search results: 0
+2024-12-31 08:11:37 - INFO - manager.py:70 - Number of documents to load: 0
+2024-12-31 08:11:37 - ERROR - manager.py:80 - Error creating FAISS vectorstore: list index out of range
+2024-12-31 08:11:37 - WARNING - decourator.py:67 - Retry 2/5 for search after error: list index out of range
+2024-12-31 08:11:43 - INFO - searxng.py:114 - Number of search results: 29
+2024-12-31 08:11:43 - INFO - manager.py:70 - Number of documents to load: 29
+2024-12-31 08:11:45 - INFO - manager.py:77 - FAISS vectorstore created successfully.
+2024-12-31 08:18:26 - INFO - searxng.py:114 - Number of search results: 29
+2024-12-31 08:18:26 - INFO - manager.py:77 - Number of documents to load: 29
+2024-12-31 08:18:28 - INFO - manager.py:84 - FAISS vectorstore created successfully.
+2024-12-31 08:26:42 - INFO - searxng.py:114 - Number of search results: 25
+2024-12-31 08:26:42 - INFO - manager.py:77 - Number of documents to load: 25
+2024-12-31 08:26:44 - INFO - manager.py:84 - FAISS vectorstore created successfully.
+2024-12-31 08:27:01 - INFO - manager.py:77 - Number of documents to load: 21
+2024-12-31 08:27:04 - INFO - manager.py:84 - FAISS vectorstore created successfully.
+2024-12-31 08:47:50 - INFO - searxng.py:114 - Number of search results: 25
+2024-12-31 08:47:50 - INFO - manager.py:77 - Number of documents to load: 25
+2024-12-31 08:47:53 - INFO - manager.py:84 - FAISS vectorstore created successfully.
+2024-12-31 08:47:57 - INFO - scrape.py:130 - Failed to fetch https://www.trustedreviews.com/best/best-smartphone-3431175 after 3 attempts: Cannot connect to host www.trustedreviews.com:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)')]
+2024-12-31 08:47:59 - INFO - manager.py:77 - Number of documents to load: 19
+2024-12-31 08:48:01 - INFO - manager.py:84 - FAISS vectorstore created successfully.
+2024-12-31 08:49:00 - INFO - searxng.py:114 - Number of search results: 25
+2024-12-31 08:49:00 - INFO - manager.py:77 - Number of documents to load: 25
+2024-12-31 08:49:02 - INFO - manager.py:84 - FAISS vectorstore created successfully.
+2024-12-31 08:49:09 - INFO - scrape.py:130 - Failed to fetch https://www.trustedreviews.com/best/best-smartphone-3431175 after 3 attempts: Cannot connect to host www.trustedreviews.com:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)')]
+2024-12-31 08:49:10 - INFO - manager.py:77 - Number of documents to load: 19
+2024-12-31 08:49:12 - INFO - manager.py:84 - FAISS vectorstore created successfully.
+2024-12-31 08:54:26 - INFO - searxng.py:114 - Number of search results: 25
+2024-12-31 08:54:27 - INFO - manager.py:77 - Number of documents to load: 25
+2024-12-31 08:54:29 - INFO - manager.py:84 - FAISS vectorstore created successfully.
+2024-12-31 08:54:33 - INFO - scrape.py:130 - Failed to fetch https://www.trustedreviews.com/best/best-smartphone-3431175 after 3 attempts: Cannot connect to host www.trustedreviews.com:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)')]
+2024-12-31 08:54:35 - INFO - manager.py:77 - Number of documents to load: 19
+2024-12-31 08:54:37 - INFO - manager.py:84 - FAISS vectorstore created successfully.

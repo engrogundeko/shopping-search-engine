@@ -68,6 +68,7 @@ class ShopProviderResponse:
                 title = product.get('prices', {}).get('name', 'Unknown Product')
                 discount = product.get('prices', {}).get('discount', 0.0)
                 price = product.get('prices', {}).get('current_price', 0.0)
+                old_price = product.get('prices', {}).get('old_price', 0.0)
                 # Safely extract features, categories, and box contents
                 specifications = product.get('specifications', {})
                 product_info = product.get('product', {})
@@ -80,16 +81,35 @@ class ShopProviderResponse:
                 product_url = product.get('prices', {}).get('product_url', '')
 
                 # Construct the semantic-rich markdown for each product
-                markdown = f"""# Product Information
+                markdown = f"""# 🏷️ Product Information
 
-                ## Features
-                - **Name:** {title}
-                - **Description:** {product_info.get('description', 'No description available')}
-                - **Brand:** {product_info.get('brand', 'Unknown')}
-                - **Categories:**\n{categories}
-                - **Key Features:**\n{features}
-                - **Box Contents:**\n{box_contents}
-                """
+                    ## 📝 Basic Details
+                    - **Product Name:** {title}
+                    - **Brand:** {product_info.get('brand', '🔍 Unknown')}
+
+                    ## 💰 Pricing
+                    - **Current Price:** ₦{price}
+                    - **Original Price:** ₦{old_price}
+                    - **Discount:** {discount}%
+
+                    ## 📄 Description
+                    {product_info.get('description', '🚫 No description available')}
+
+                    ## 📦 Product Taxonomy
+                    ### Categories
+                    {categories}
+
+                    ## ✨ Key Features
+                    {features}
+
+                    ## 📋 Box Contents
+                    {box_contents}
+
+                    ## 🔍 Additional Information
+                    - **Seller:** {product_info.get('seller', '🏢 Not specified')}
+                    - **Product URL:** {product_url or '🔗 URL Not Available'}
+                    """
+                    # - **Availability:** {'In Stock' if product_info.get('in_stock', False) else '🚫 Out of Stock'}
 
                 metadata = {
                             "title": title,

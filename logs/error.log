@@ -1,0 +1,49 @@
+2024-12-30 22:02:55 - ERROR - manager.py:114 - Error extracting content: Unexpected response from gemini 404, body:
+{
+  "error": {
+    "code": 404,
+    "message": "models/gemini-2.0-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+2024-12-30 22:02:55 - ERROR - manager.py:114 - Error extracting content: Unexpected response from gemini 404, body:
+{
+  "error": {
+    "code": 404,
+    "message": "models/gemini-2.0-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+2024-12-30 22:02:55 - ERROR - manager.py:114 - Error extracting content: Unexpected response from gemini 404, body:
+{
+  "error": {
+    "code": 404,
+    "message": "models/gemini-2.0-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+2024-12-30 22:02:56 - ERROR - manager.py:114 - Error extracting content: Unexpected response from gemini 404, body:
+{
+  "error": {
+    "code": 404,
+    "message": "models/gemini-2.0-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+2024-12-30 22:02:56 - ERROR - manager.py:114 - Error extracting content: Unexpected response from gemini 404, body:
+{
+  "error": {
+    "code": 404,
+    "message": "models/gemini-2.0-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.",
+    "status": "NOT_FOUND"
+  }
+}
+2024-12-30 22:04:32 - ERROR - manager.py:114 - Error extracting content: 2 validation errors for typed-dict
+candidates.0.content
+  Field required [type=missing, input_value={'finishReason': 'MALFORMED_FUNCTION_CALL'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.10/v/missing
+candidates.0.finishReason
+  Input should be 'STOP' [type=literal_error, input_value='MALFORMED_FUNCTION_CALL', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.10/v/literal_error
+2024-12-31 08:11:35 - ERROR - manager.py:80 - Error creating FAISS vectorstore: list index out of range
+2024-12-31 08:11:37 - ERROR - manager.py:80 - Error creating FAISS vectorstore: list index out of range

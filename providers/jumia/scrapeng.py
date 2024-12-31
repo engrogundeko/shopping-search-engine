@@ -10,8 +10,8 @@ from .utils import (
     extract_seller_information,
     extract_specifications, 
     extract_product_data,
-    parse_price,
-    parse_discount
+    # parse_price,
+    # parse_discount
     )
 from schema import (
     SellerDetailSchema, 
@@ -64,12 +64,12 @@ class JumiaScraperNG(ShopEngine):
             product['discount'] = product_container.find('div', class_='bdg _dsct _sm').text.strip() if product_container.find('div', class_='bdg _dsct _sm') else "No Discount"
             product['product_url'] = self.url + product_container.find('a', class_='core')['href']
             product['currency'] = "NGN"
-            try:
-                product['current_price'] = parse_price(product['current_price'])
-                product['old_price'] = parse_price(product['old_price'])
-                product['discount'] = parse_discount(product['discount'])
-            except ValueError:
-                continue
+            # try:
+            #     product['current_price'] = parse_price(product['current_price'])
+            #     product['old_price'] = parse_price(product['old_price'])
+            #     product['discount'] = parse_discount(product['discount'])
+            # except ValueError:
+            #     continue
 
             product_detail = PriceDetailSchema(**product)
             products.append(product_detail)

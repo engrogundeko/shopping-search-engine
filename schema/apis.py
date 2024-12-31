@@ -1,5 +1,5 @@
 from pydantic import BaseModel, Field, field_validator
-from typing import List, Optional
+from typing import List, TypedDict, Optional, Dict, Any
 
 
 class FilterAttributes(BaseModel):
@@ -22,6 +22,14 @@ class SearchRequest(BaseModel):
     mode: str = Field(default="search", description="Search mode")
     query: Optional[str] = None
     cache_ttl: int = Field(default=3600, description="Cache time to live in seconds")
+
+class WebSearchRequest(BaseModel):
+    search_query: str = Field(..., description="Main search query")
+    filter: Optional[SearchFilter] = None
+    n_k: int = Field(default=10, ge=1, le=50, description="Number of results to return")
+    description: Optional[str] = Field(None, description="Additional search description")
+    mode: str = Field(default="search", description="Search mode")
+
 
 class Metadata(BaseModel):
     title: str
@@ -54,8 +62,16 @@ class SearchResult(BaseModel):
     content: str
     metadata: Metadata
 
+class WebSearchResult(BaseModel):
+    content: str
+    metadata: Dict[str, Any]
+
+class WebResultDict(TypedDict):
+    metadata: dict
+    content: str
+
 class SearchResponse(BaseModel):
-    results: List[SearchResult]
+    results: List[WebResultDict]
     total_results: int
     search_query: str
     processing_time: Optional[float] = None

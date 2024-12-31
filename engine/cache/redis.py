@@ -9,13 +9,13 @@ class RedisCache(CacheBase):
     """
 
     def __init__(self, 
-    host='redis-10198.c228.us-central1-1.gce.redns.redis-cloud.com', 
-    port=10198, 
+    host='localhost', 
+    port=6379, 
     db=0):
         self.host = host
         self.port = port
         self.db = db
-        self.client = redis.Redis(host=self.host, port=self.port, db=self.db, password=REDIS_PASSWORD, username="default")
+        self.client = redis.Redis(host=self.host, port=self.port, db=self.db)
 
     # def connect(self):
     #     self.client = redis.Redis(host=self.host, port=self.port, db=self.db)

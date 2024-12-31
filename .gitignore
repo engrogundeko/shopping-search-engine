@@ -1,3 +1,5 @@
 .env  
 /venv
 config.env
+*.json
+*.txt

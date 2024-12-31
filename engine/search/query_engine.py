@@ -25,9 +25,9 @@ class QueryEngine(QueryEngineBase):
     def __init__(self):
         # Placeholder for indexing and models
         self.index = []
-        self.redis_url: str = "redis://localhost:6379"
-        self.host = "redis-10198.c228.us-central1-1.gce.redns.redis-cloud.com"
-        self.port = 10198
+        # self.redis_url: str = "redis://localhost:6379"
+        self.host = "redis-14762.c12.us-east-1-4.ec2.redns.redis-cloud.com"
+        self.port = 14762
         self.index_name: str = "search_index"
         self.embedding_model: str = "models/embedding-001"
         self.metadata_schema: Optional[List[Dict[str, Any]]] = None
@@ -132,22 +132,23 @@ class QueryEngine(QueryEngineBase):
 
         # Fallback to in-memory storage if Redis is not available
         try:
-            print(self.documents)
             self.vectorstore  = await to_thread(
                 RedisVectorStore.from_documents,
                 documents=self.documents,
                 embedding=self.embeddings,
                 config=self.vectorstore_config
             )
+            
         except Exception as e:
             print(f"Redis connection failed: {e}")
             print("Falling back to in-memory vector storage")
             # Use FAISS as a fallback
-            self.vector_store = await to_thread(
+            self.vectorstore = await to_thread(
                 FAISS.from_documents,
                 documents=self.documents,
                 embedding=self.embeddings
             )
+            print(self.vectorstore)
 
         return self.vectorstore 
     
@@ -178,14 +179,14 @@ class QueryEngine(QueryEngineBase):
         )
         return compressor_retriever.invoke(query)
 
-    def filter_results(self, results: List[Dict[str, Any]], filter_criteria: Dict[str, Any]) -> List[Dict[str, Any]]:
+    def filter_results(self, results: List[Dict[str, Any]], filter_criteria: Dict[str, Any]):
         """
         Filter search results based on complex filter criteria.
-        
+
         Args:
             results (List[Dict[str, Any]]): List of search results to filter
             filter_criteria (Dict[str, Any]): Dictionary containing filter conditions
-        
+
         Returns:
             List[Dict[str, Any]]: Filtered list of results
         """
@@ -194,30 +195,52 @@ class QueryEngine(QueryEngineBase):
         # Price filtering
         if 'price' in filter_criteria:
             price_filter = filter_criteria['price']
+            
+            def is_valid_price(price_value):
+                # Handle different price formats and None values
+                try:
+                    # Remove currency symbols and commas
+                    if isinstance(price_value, str):
+                        price_value = price_value.replace('₦', '').replace(',', '')
+                    
+                    # Convert to float, return False if conversion fails
+                    float_price = float(price_value) if price_value is not None else float('inf')
+                    return float_price
+                except (ValueError, TypeError):
+                    return float('inf')
+            
+            # Filter by max price if specified
             if 'max' in price_filter:
                 filtered_results = [
                     result for result in filtered_results 
-                    if float(result.get('price', float('inf'))) <= price_filter['max']
+                    if is_valid_price(result.get('price')) <= price_filter['max']
+                ]
+            
+            # Filter by min price if specified
+            if 'min' in price_filter:
+                filtered_results = [
+                    result for result in filtered_results 
+                    if is_valid_price(result.get('price')) >= price_filter['min']
                 ]
         
-        # # Attributes filtering
+        # # Attributes filtering (commented out for now)
         # if 'attributes' in filter_criteria:
         #     attributes = filter_criteria['attributes']
             
-            # # Category filtering
-            # if 'category' in attributes:
-            #     filtered_results = [
-            #         result for result in filtered_results 
-            #         if float(result.get('price', float('inf'))) <= price_filter['max']
-            #     ]
+        #     # Category filtering
+        #     if 'category' in attributes and attributes['category']:
+        #         filtered_results = [
+        #             result for result in filtered_results 
+        #             if attributes['category'].lower() in str(result.get('category', '')).lower()
+        #         ]
             
-            # # Features filtering
-            # if 'features' in attributes:
-            #     required_features = set(attributes['features'])
-            #     filtered_results = [
-            #         result for result in filtered_results
-            #         if required_features.issubset(set(result.get('features', [])))
-            #     ]
+        #     # Features filtering
+        #     if 'features' in attributes and attributes['features']:
+        #         required_features = set(attributes['features'])
+        #         filtered_results = [
+        #             result for result in filtered_results
+        #             if required_features.issubset(set(result.get('features', [])))
+        #         ]
         
         return filtered_results
 
@@ -265,10 +288,8 @@ class QueryEngine(QueryEngineBase):
         } for doc in docs]
         
         # Apply additional filtering if filter criteria are provided
-        if filter:
-            print("============================")
-            rs = self.filter_results(results, filter)
-            if rs is not None and len(rs) > 0:
-                return rs
-        print("============================")
+        # if filter:
+        #     rs = self.filter_results(results, filter)
+        #     if rs is not None and len(rs) > 0:
+        #         return rs
         return results
